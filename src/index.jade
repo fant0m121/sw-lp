@@ -1,0 +1,30 @@
+extends _layouts/base
+
+include _modules/link/link
+
+block content
+    .ui-main-section
+        .l-grid.l-grid--container
+            .l-row.l-row--xs-middle
+                .l-col.l-col--xs-12.l-col--md-offset-1
+                    .ui-main-section__top Главный тренд 2018 года
+            .l-row.l-row--xs-middle
+                .l-col.l-col--xs-12
+                    .ui-main-section__heading Электро
+                        span велосипеды
+                    .ui-main-section__dilevery
+                        img(src="/images/package.png", alt="")
+                        span Бесплатная доставка по всей России
+            .l-row.l-row--xs-middle
+                .l-col.l-col--xs-12.l-col--md-offset-2.l-col--md-8
+                    .ui-main-section__form
+                        .ui-main-form
+                            .ui-main-form__title Пожалуйста, введите Ваше имя и телефон
+                            .ui-main-form__text чтобы мы могли уточнить комфортное время и адрес доставки
+                            .ui-main-form__content
+                                .ui-main-form__item
+                                    input.ui-input.ui-input--name(type="text", placeholder="Ваше имя")
+                                .ui-main-form__item
+                                    input.ui-input.ui-input--phone(type="text", placeholder="Ваш телефон")
+                                .ui-main-form__item
+                                    button.ui-button Отправить

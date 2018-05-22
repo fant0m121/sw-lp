@@ -1,0 +1,263 @@
+@import '_fonts'
+@import '_variables'
+
+// Normalize Styles
+@import '../../node_modules/normalize.css/normalize.css'
+// Import Modules
+@import 'grid/mixins/helpers'
+@import 'grid/mixins/grid-framework'
+@import 'grid/mixins/bem'
+@import 'grid/components/col'
+@import 'grid/components/grid'
+@import 'grid/components/row'
+@import 'grid/components/text'
+
+init($breakpoints, $columns)
+
+// Box sizing partial styles
+// Apply a natural box layout model to all elements
+*,
+*:before,
+*:after
+    box-sizing border-box
+
+.ui-top-line
+    background-color $color-black-two
+    padding 16px 0
+
+    &__phone
+        text-align right
+
+.ui-top-phone
+    text-align right
+    display flex
+    align-items center
+    justify-content flex-end
+
+    &__label
+        font-size 12px
+        font-weight 300
+        line-height 1.33
+        font-family $font-museo-sans
+        color white
+        opacity .3
+
+    &__number
+        font-family $font-museo-sans
+        font-size 16px
+        font-weight 500
+        font-style normal
+        font-stretch normal
+        line-height 1
+        letter-spacing normal
+        text-align right
+        color white
+        margin-left 8px
+
+.ui-menu-top
+    display flex
+    align-items center
+    font-size 12px
+    font-weight 300
+    line-height 1.33
+    font-family $font-museo-sans
+    font-weight 300
+    transition opacity .17s ease-in-out
+
+    &__item + &__item
+        margin-left 30px
+
+    &__link
+        color white
+        opacity .3
+        text-decoration none
+        cursor pointer
+
+        &:hover
+            color white
+            opacity 1
+
+.ui-header
+    background white
+    padding 31px 0 20px
+    position relative
+    z-index 1
+
+.ui-logo
+    font-size 0
+
+.ui-characteristics
+    display flex
+    align-items center
+
+    &__item
+        display flex
+        align-items center
+        flex 1
+
+    &__icon
+        font-size 0
+
+    &__text
+        font-size 13px
+        font-family $font-museo-sans
+        font-weight 300
+        line-height 1.23
+        color $color-black
+        margin-left 10px
+
+.ui-header-phone
+    text-align right
+
+    &__number
+        font-family $font-raleway
+        font-size 26px
+        font-weight bold
+        line-height 0.69
+        color $color-black
+
+    &__label
+        font-family $font-museo-sans
+        font-size 12px
+        font-weight 300
+        line-height 1.33
+        color $color-black-60
+        margin-top 8px
+
+.ui-main-section
+    background url('/images/main-background.png') no-repeat top center
+    margin-top -61px
+    padding-top 263px
+    padding-bottom 360px
+
+    &__top
+        background-color $color-charcoal
+        display inline-block
+        color white
+        font-family $font-merriweather
+        font-style italic
+        font-weight 300
+        font-size 22px
+
+    &__heading
+        font-family $font-raleway
+        color white
+        font-weight 600
+        font-size 106px
+        position relative
+
+        span
+            font-weight 500
+
+        &:after
+            content ''
+            position absolute
+            bottom -17px
+            width 206px
+            height 12px
+            opacity 0.95
+            border-radius 1px
+            background-color $color-faded-red
+            left 10%
+
+    &__dilevery
+        font-family $font-museo-sans
+        font-size 20px
+        font-weight 300
+        line-height 0.9
+        text-align center
+        color white
+        margin-top 30px
+        display flex
+        align-items center
+        justify-content center
+
+        span
+            margin-left 10px
+
+    &__form
+        margin-top 130px
+
+.ui-main-form
+    display block
+
+    &__title
+        font-family $font-raleway
+        font-size 26px
+        font-weight bold
+        line-height 0.92
+        letter-spacing 0.5px
+        text-align center
+        color white
+
+    &__text
+        margin-top 7px
+        height 16px
+        opacity 0.8
+        font-family $font-museo-sans
+        font-size 16px
+        font-weight 300
+        line-height 1.5
+        text-align center
+        color white
+
+    &__content
+        margin-top 40px
+        display flex
+
+    &__item
+        width 33.3333%
+
+        & + &
+            margin-left 8px
+
+// Styling on warning for users on IE7 or below
+.browsehappy
+    text-align center
+    margin 0
+    background #fff8e2
+    color #000
+    padding 0.5em 0
+
+.ui-input
+    width 100%
+    font-family $font-museo-sans
+    font-size 14px
+    font-weight 300
+    line-height 2
+    text-align left
+    color $black-60
+    height 48px
+    border-radius 1px
+    background-color white
+    border 0
+    padding-left 44px
+
+    &--name
+        background-image url('/images/user.png')
+        background-repeat no-repeat
+        background-position 19px 50%
+
+    &--phone
+        background-image url('/images/phone.png')
+        background-repeat no-repeat
+        background-position 19px 50%
+
+.ui-button
+    width 100%
+    outline 0
+    border 0
+    font-family $font-raleway
+    font-size 12px
+    font-weight bold
+    line-height 2.33
+    letter-spacing 1px
+    text-align center
+    color white
+    height 48px
+    border-radius 1px
+    background-image linear-gradient(344deg, $color-apple-green, $color-kiwi-green)
+    box-shadow inset 0px -2px 0 0 $color-sap-green
+
+    &:hover
+        background-image linear-gradient(344deg, $color-kiwi-green, $color-apple-green)
